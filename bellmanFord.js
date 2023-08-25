@@ -4,10 +4,7 @@ const add_edge = (graph, from, to, cost) => {
     graph.push(edge);
 };
 const bellmanFord = (graph, v, start) => {
-    const d = new Array(v);
-    for (let j = 0; j < d.length; j++) {
-        d[j] = Number.POSITIVE_INFINITY;
-    }
+    const d = new Array(v).fill(Number.POSITIVE_INFINITY);
     d[start] = 0;
     for (let i = 0; i < v; i++) {
         for (const edges of graph) {
