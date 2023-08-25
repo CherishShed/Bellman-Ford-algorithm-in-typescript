@@ -26,7 +26,7 @@ const bellmanFord = (graph:Graph,v:number, start:number ):number[]=>{
 
 const displayGraph=(start:number,v:number, algoResults:number[])=>{
     v = (start>0)? v+start:v;
-    console.log(v);
+    // console.log(v);
     for (let i=start; i<v; i++){
         console.log(`The cost to get from node ${start} to ${i} is ${algoResults[i]}`)
     }
